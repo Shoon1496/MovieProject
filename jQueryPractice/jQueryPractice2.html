@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQueryPractice2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style type="text/css">
+		#center {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="container">	
+	<div class="jumbotron">
+		<h4 id="center">Let's Have Fun!</h4>
+		<!-- BUTTONS -->
+		<!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
+		<p>
+			<button type="button" id="btn1"  role = "button">#btn1</button>
+			<button type="button" id="btn2"  role = "button">#btn2</button>
+			<button type="button" id="btn3" role = "button">#btn3</button>
+			<button type="buttont" id="btn4" role = "button">#btn4</button>
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">
+			<div id="panel1" class="panel panel-primary">
+				<div class="panel-heading">Panel1
+				</div>
+				<div class="panel-body">content
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div id="panel2" class="panel panel-primary">
+				<div class="panel-heading">Panel2
+				</div>
+				<div class="panel-body">content
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div id="panel3" class="panel panel-primary">
+				<div class="panel-heading">Panel3
+				</div>
+				<div class="panel-body">content
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div id="panel3" class="panel panel-primary">
+				<div class="panel-heading">Panel4
+				</div>
+				<div class="panel-body">content
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<script>
+	$(function(){
+
+		var content = "My new Awsome Content"
+
+ 	$('#btn1').on('click', function() {
+ 		$('#panel1 .panel-body').html('my new panel content');
+ 	});
+ 	
+	$('#btn1').on('click', function() {
+ 		$('#panel1').toggle();
+ 	});
+
+	$('.panel-button').on('click', function() {
+ 		var panelId = $(this).attr('data-panalid');
+ 		$('#'+panelId).toggle;
+ 	});
+
+});
+</script>
+ 	
+</body>
+</html>
