@@ -1,8 +1,9 @@
-.bck_img {
-	position: fixed;
-	width: 100%;
-	height: 550px;
-	background: #FFFFFF;
+#background {
+	background: url(images/bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
 }
 /* Header **/
 header{
@@ -18,8 +19,8 @@ header a{
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	line-height: 23px;
-	font-size: 12px;
+	line-height: 30px;
+	font-size: 8px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration:none;
@@ -28,12 +29,17 @@ header a{
 header li{
   	float:left;
     display:inline;
-	padding: 0 20px 0 20px;
+	padding: 0 8px 0 8px;
 	font-family: Helvetica;
-	line-height: 110px;
-	font-size: 15px;
+	line-height: 18px;
+	font-size: 8px;
 	letter-spacing: 5px;
 	color: #2CA1F8;
+}
+#contact {
+	margin-right: 0px;
+	padding-right: 0px;
+	text-align: right;
 }
 header #branding{
 	float:left;
@@ -47,8 +53,8 @@ header nav{
 }
 header .highlight {
 	font-family: Helvetica;
-	line-height: 110px;
-	font-size: 15px;
+	line-height: 18px;
+	font-size: 8px;
 	letter-spacing: 5px;
 	color: #2CA1F8;
 	margin: 0;
@@ -56,8 +62,8 @@ header .highlight {
 }
 header .code {
 	font-family: Helvetica;
-	line-height: 110px;
-	font-size: 15px;
+	line-height: 18px;
+	font-size: 8px;
 	letter-spacing: 5px;
 	color: #000;
 	margin: 0;
@@ -67,70 +73,100 @@ header a:hover{
 	color:#cccccc;
 	font-weight:bold;
 }
+.line1 {
+	/*font-size: 35px;*/
+	color: #000;
+}
 .thalescode {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 48px;
+	line-height: 25px;
+	font-size: 30px;
 	letter-spacing: -0.3px;
 	color: #000000;
-	margin-bottom: 20px;
+	margin-top: 50px;
+	padding-left: 50px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 .thalescode_description {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 30px;
+	line-height: 43px;
+	font-size: 25px;
 	letter-spacing: -0.3px;
 	color: #000000;
+	mix-blend-mode: normal;
+	/*margin-top: 50px;*/
+	padding-left: 50px;
+	padding-top: 20px;
 }
-#black_botton_1 {
-	margin-top: 23px;
+.thalescode_description_2nd_line {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	line-height: 28px;
-	font-size: 14px;
+	line-height: 43px;
+	font-size: 25px;
+	letter-spacing: -0.3px;
+	color: #000000;
+	mix-blend-mode: normal;
+	/*margin-top: 50px;*/
+	padding-left: 50px;
+}
+#black_botton_1 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 18px;
+	font-size: 8px;
 	text-transform: uppercase;
 	color: #FFFFFF;	
 	padding: 5px 15px;
 	background-color: #000;
-	margin-right: 30px;
+	margin-right: 2px;
+	margin-left: 50px;
+	margin-top: 20px;
 }
 #black_botton_2 {
-	margin-top: 23px;
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	line-height: 28px;
-	font-size: 14px;
+	line-height: 18px;
+	font-size: 8px;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	padding: 5px 15px;
 	background-color: #000;
+	margin-right: 2px;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 .thalescode_paragraph {
-	margin-top: 30px;
+	margin: 6px 35px;
 	font-family: Ubuntu;
 	font-style: normal;
-	font-weight: 500;
-	line-height: 23px;
-	font-size: 15px;
+	/*font-weight: 500;*/
+	/*line-height: 23px;*/
+	font-size: 10px;
 	text-transform: lowercase;
 	color: #000000;
 	background-color: white;
-	padding: 40px 40px;
+	padding: 17px 60px;
 	mix-blend-mode: normal;
-	opacity: 0.5;
+	/*opacity: 0.3;*/
 }
 #thalescode_img {
-	width: 250px;
-	height: 250px;
-	border-radius: 200px;
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	margin-left: -120px;
+	margin-top: 50px;
 }
 .latestjobs {
 	padding: 15px;
-	margin: 0px 75px 30px 50px;
+	margin: -90px 0px 30px 0px;
 }
 .LatestJobs_title {
 	font-family: Ubuntu;
@@ -172,7 +208,7 @@ header a:hover{
     display: inline-block;
     margin-top: -15px;
 }
-.h2, .h3, h1, h2, h3 {
+.h2, .h3, h2, h3 {
     margin-top: 20px;
     margin-bottom: 0px;
     border: 0 0;
@@ -249,6 +285,7 @@ p {
 	right: -4.94%;
 	opacity: 0.4;
 	border: 1px solid #979797;
+	/*padding-bottom: 50px;*/
 }
 .getWhereyouAreGoing_Title {
 	position: relative;
@@ -307,4 +344,106 @@ p {
 	margin-top: 200px;
 	margin-left: 130px;
 	/*float: right;*/
+}
+.WhyThalesCode {
+	height: 800px;
+	width: 1130px;
+	display: block;
+}
+.ThalesBlog_title {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 90px;
+	padding-top: 25px;
+	color: #2B3247;
+}
+.learnmore {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: normal;
+	text-transform: uppercase;
+
+	color: #2B3247;
+
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+.card-text_1 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 50px;
+	color: #000000;
+}
+.card-text_2 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+
+	color: #000000;
+}
+.card-text_3 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+
+	color: #000000;
+}
+.card_text_4 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 50px;
+
+	color: #000000;
+}
+.card_paragraph_1 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+	padding-top: 60px;
+	color: #8C93AA;
+}
+.card_paragraph_2 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+
+	color: #8C93AA;
+}
+.card_paragraph_3 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+
+	color: #8C93AA;
+}
+.card_paragraph_4 {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+	padding-top: 60px;
+	color: #8C93AA;
 }
