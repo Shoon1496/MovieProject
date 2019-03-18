@@ -4,13 +4,25 @@
     margin-bottom: 0;
   }
 }
-
+.sidenav {
+    width:3%;
+    height:30%;
+    position: fixed;
+    background-color: black;
+    margin-left: 50px;
+}
+#HamburgerIcon {
+	width: 25px;
+	height: 2px;
+	background-color: white;
+	margin: 6px 0;
+}
 #background {
 	background: url(images/bg.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	margin-bottom: 100px;
-	padding-bottom: 50px;
+	padding-bottom: 0px;
 }
 /* Header **/
 header{
@@ -80,9 +92,12 @@ header a:hover{
 	color:#cccccc;
 	font-weight:bold;
 }
-.line1 {
-	/*font-size: 35px;*/
-	color: #000;
+.line2 {
+	top: 30px;
+	border-top: 4px solid #333;
+	width: 20px;
+	position: absolute;
+	margin-left: 50px;
 }
 .thalescode {
 	font-family: Ubuntu;
@@ -106,7 +121,6 @@ header a:hover{
 	letter-spacing: -0.3px;
 	color: #000000;
 	mix-blend-mode: normal;
-	/*margin-top: 50px;*/
 	padding-left: 50px;
 	padding-top: 20px;
 }
@@ -119,7 +133,6 @@ header a:hover{
 	letter-spacing: -0.3px;
 	color: #000000;
 	mix-blend-mode: normal;
-	/*margin-top: 50px;*/
 	padding-left: 50px;
 }
 #black_botton_1 {
@@ -154,8 +167,6 @@ header a:hover{
 	margin: 0px 35px;
 	font-family: Ubuntu;
 	font-style: normal;
-	/*font-weight: 500;*/
-	/*line-height: 23px;*/
 	font-size: 10px;
 	text-transform: lowercase;
 	color: #000000;
@@ -178,7 +189,7 @@ header a:hover{
 }*/
 .latestjobs {
 	padding: 15px;
-	margin: -60px 0px 30px 0px;
+	margin: 0px 0px 15px 0px;
 }
 .LatestJobs_title {
 	font-family: Ubuntu;
@@ -295,7 +306,6 @@ p {
 	right: -4.94%;
 	opacity: 0.4;
 	border: 1px solid #979797;
-	/*padding-bottom: 50px;*/
 }
 .getWhereyouAreGoing_Title {
 	position: relative;
@@ -353,7 +363,6 @@ p {
 	height: 400px;
 	margin-top: 100px;
 	margin-left: 30px;
-	/*float: right;*/
 }
 .Why_ThalesCode {
 	font-family: Ubuntu;
@@ -515,7 +524,6 @@ p {
 	font-size: 13px;
 	line-height: 20px;
 	text-align: justify;
-
 	color: #8C93AA;
 }
 .card_paragraph_3 {
@@ -525,7 +533,6 @@ p {
 	font-size: 13px;
 	line-height: 20px;
 	text-align: justify;
-
 	color: #8C93AA;
 }
 .card_paragraph_4 {
@@ -544,7 +551,6 @@ p {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 39px;
-
 	color: #2B3247;
 }
 .Seek_for_where_we_are {
@@ -680,66 +686,129 @@ li {
 	color: #000000;
 	margin-left: 250px;
 }
-@keyframes slider {
-
-0% {
-	left: 0;
+.CarouselContainer {
+    width: 100%;
+    height: 250px;
+    margin: 15px 0px;
+    user-select: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.CarouselContainer .slideShowContainer {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+.CarouselContainer .slideShowContainer #playPause:hover {
+    opacity: .7;
+}
+.CarouselContainer .slideShowContainer .slideHolder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.CarouselContainer .slideShowContainer .slideHolder .captionText {
+    display: none;
+}
+.CarouselContainer .slideShowContainer>.captionTextHolder {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+.CarouselContainer .slideShowContainer>.captionTextHolder>.captionText {
+    margin: 0;
 }
 
-20% {
-	left: 0;
+.CarouselContainer #dotsContainer {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
-
-25% {
-	left: -100%;
+.CarouselContainer #dotsContainer .dots {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #bbb;
+    cursor: pointer;
+    transition:background-color 0.5s;
 }
-
-45% {
-    left: -100%;
-
+.CarouselContainer #dotsContainer .dots:first-child {
+    margin-left: 0;
 }
-
-50% {
-		left: -200%;
-
+.CarouselContainer #dotsContainer .dots:hover,.CarouselContainer #dotsContainer .dots.active {
+    background-color: #717171;;
 }
-
-70% {
-	left: -200%;
-}
-
-75% {
-	left: -300%;
-}
-
-95% {
-	left: -300%;
-}
-
-100% {
-	left: -400%;
+.CarouselContainer .moveLeftCurrentSlide {
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
 
 }
-
+.CarouselContainer .moveLeftNextSlide {
+    animation-name: moveLeftNext;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes moveLeftCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: -100%;opacity: 1;}
+}
+@keyframes moveLeftNext {
+    from {margin-left: 100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
 }
 
-#slider {
-	overflow: hidden;
+
+.CarouselContainer .moveRightCurrentSlide {
+    animation-name: moveRightCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
 }
-
-#slider figure img {
-	width: 20%;
-	float: left;
+.CarouselContainer .moveRightPrevSlide {
+    animation-name: moveRightPrev;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
 }
-
-#slider figure {
-	position: relative;
-	width: 100%;
-	height: 50%;
-	margin: 0;
-	left: 0;
-	text-align: left;
-	font-size: 0;
-	animation: 5s slider infinite; 
-
+@keyframes moveRightCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: 100%;opacity: 1;}
+}
+@keyframes moveRightPrev {
+    from {margin-left: -100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+.slideTextFromBottom {
+    animation-name: slideTextFromBottom;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromBottom {
+    from {opacity: 0;margin-top: 100px}
+    to {opacity: 1;margin-top: 0px;}
+}
+.slideTextFromTop {
+    animation-name: slideTextFromTop;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromTop {
+    from {opacity: 0;margin-top: -100px}
+    to {opacity: 1;margin-top: 0px;}
 }

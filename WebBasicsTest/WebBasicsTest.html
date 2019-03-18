@@ -15,17 +15,30 @@
 
 <body>
 
+<!-- Menu Bar -->
+<!-- <div class="col-xs-12 col-sm-12 col-md-1">
+  <div class="row">
+        <div class="sidenav">
+            <center>
+              <div id="HamburgerIcon"></div>
+              <div id="HamburgerIcon"></div>
+              <div id="HamburgerIcon"></div>
+            </center>
+        </div>
+    </div>
+</div> -->
+
 <!-- Header Section Starts-->
 <div class="container">
   <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="background"> 
     <!-- Navigation -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <header>
+        <header> 
             <div id="branding">
               <span class="highlight">THALES</span><span class="code">CODE</span>
             </div>
-            <nav>
+            <nav id="horizontal-navbar">
               <ul class="float-right">
                 <li><a href="WebBasicsTest.html">Home</a></li>
                 <li><a href="WebBasicsTest.html">Training</a></li>
@@ -40,7 +53,7 @@
      <!-- ThalesCode Section -->
       <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">   
         <div class="float-left">
-          <!-- <span class="line1">-</span> -->
+          <span class="line2"></span>
           <h1 class="thalescode">ThalesCode</h1>
           <span class="thalescode_description">The best way to learn how to</span> <br>
           <span class="thalescode_description_2nd_line">programing online</span> <br>
@@ -49,10 +62,10 @@
           <br>
         </div>
       </div>
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
           <img src="images/Bitmap.jpg" class="float-right" id="thalescode_img">
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">   
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">   
           <p class="thalescode_paragraph">With ThalesCode you will learn new technologies base on continues development with a flexible schedule, where you can focus and participate with others online, to find more come and join us.</p>
         </div>
   </div>
@@ -60,23 +73,6 @@
 </div>
 <!-- Header Section Ends-->
 
-<!-- Slideshow container Starts-->
-<div class="container">
-<div class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div id="slider" >
-      <figure>
-      <img src="images/bg.jpg">
-      <img src="images/bg.jpg">
-      <img src="images/bg.jpg">
-      <img src="images/bg.jpg">
-      <img src="images/bg.jpg">
-      </figure> 
-    </div>
-  </div>
-</div>
-</div> 
-<!-- Slideshow container Ends-->
 
 <!-- Latest Jobs Starts-->
 <div class="container">
@@ -92,65 +88,184 @@
 </div> 
 <!-- Latest Jobs Ends--> 
 
-<!-- Thumbnails Starts-->
+<!-- Slideshow container Starts-->
 <div class="container">
 <div class="row">
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-    <div class="thumbnail">
-      <hr class="line5">
-      <div class="caption">
-        <h3 class="fullstack_developer">FullStack Developer</h3>
-        <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
-        <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
-        <input type="button" value="PHP" class = "btn btn-info">
-        <input type="button" value="Larvel" class = "btn btn-info">
-        <input type="button" value="AWS" class = "btn btn-info">
-      </div>
-      </div>
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-    <div class="thumbnail">
-      <hr class="line5">
-      <div class="caption">
-        <h3 class="fullstack_developer">FullStack Developer</h3>
-        <h3 class="fullstack_developer" id="price2">6.000.000 - 8.000.000万円</h3>
-        <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
-        <input type="button" value="PHP" class = "btn btn-info">
-        <input type="button" value="Larvel" class = "btn btn-info">
-        <input type="button" value="AWS" class = "btn btn-info">
-      </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="CarouselContainer">
+    <div class="slideShowContainer">
+        <div id="playPause" onclick="playPauseSlides()"></div>
+        <div onclick="plusSlides(-1)" class="nextPrevBtn"></div>
+        <div onclick="plusSlides(1)" class="nextPrevBtn"></div>
+        <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <hr class="line5">
+              <h3 class="fullstack_developer">FullStack Developer</h3>
+              <h3 class="fullstack_developer" id="price1">6.000.000 - 8.000.000万円</h3>
+              <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
+              <input type="button" value="PHP" class = "btn btn-info">
+              <input type="button" value="Larvel" class = "btn btn-info">
+              <input type="button" value="AWS" class = "btn btn-info">
+            </div>
+          </p>
+        </div>
     </div>
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-    <div class="thumbnail">
-      <hr class="line5">
-      <div class="caption">
-        <h3 class="fullstack_developer">FullStack Developer</h3>
-        <h3 class="fullstack_developer" id="price3">6.000.000 - 8.000.000万円</h3>
-        <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
-        <input type="button" value="PHP" class = "btn btn-info">
-        <input type="button" value="Larvel" class = "btn btn-info">
-        <input type="button" value="AWS" class = "btn btn-info">
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-    <div class="thumbnail">
-      <hr class="line5">
-      <div class="caption">
-        <h3 class="fullstack_developer">FullStack Developer</h3>
-        <h3 class="fullstack_developer" id="price4">6.000.000 - 8.000.000万円</h3>
-        <p class="content1">The candidate in this position will work as Principal Software Developer with strong technical…</p>
-        <input type="button" value="PHP" class = "btn btn-info">
-        <input type="button" value="Larvel" class = "btn btn-info">
-        <input type="button" value="AWS" class = "btn btn-info">
-      </div>
-    </div>
+    <div id="dotsContainer"></div>
+</div>
   </div>
 </div>
-</div>
+</div> 
 <hr class="long_hr">
-<!-- Thumbnails Ends-->
+<!-- Slideshow container Ends-->
 
 <!-- Get where you’re going faster with ThalesCode Starts-->
 <div class="container">
@@ -171,6 +286,59 @@
 </div>
 <hr class="long_hr">
 <!-- Get where you’re going faster with ThalesCode Ends-->
+
+<!-- Slideshow container Starts-->
+<!-- <div class="container">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="CarouselContainer">
+    <div class="slideShowContainer">
+        <div id="playPause" onclick="playPauseSlides()"></div>
+        <div onclick="plusSlides(-1)" class="nextPrevBtn"></div>
+        <div onclick="plusSlides(1)" class="nextPrevBtn"></div>
+        <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-6 col-md-3 col-sm-3 col-xs-12">
+              <span class="number">01</span>     
+          <h5 class="IT_Training">IT Training</h5>
+          <p class="IT_Training_paragraph">Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-12 col-md-3 col-sm-3 col-xs-12">
+              <span class="number">01</span>     
+          <h5 class="IT_Training">IT Training</h5>
+          <p class="IT_Training_paragraph">Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-12 col-md-3 col-sm-3 col-xs-12">
+              <span class="number">01</span>     
+          <h5 class="IT_Training">IT Training</h5>
+          <p class="IT_Training_paragraph">Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
+            </div>
+          </p>
+        </div>
+        <div class="slideHolder">
+          <p class="captionText">
+            <div class="col-lg-12 col-md-3 col-sm-3 col-xs-12">
+              <span class="number">01</span>     
+          <h5 class="IT_Training">IT Training</h5>
+          <p class="IT_Training_paragraph">Our team includes people who specialize in IT development and product development services who have the experience and knowledge to understand what our clients need.</p>
+            </div>
+          </p>
+        </div>
+    </div>
+    <div id="dotsContainer"></div>
+  </div>
+    </div>
+</div>
+</div>  -->
 
 <!-- Why ThalesCode Section Starts-->
 <div class="container">
@@ -234,7 +402,7 @@
 </div> 
 </div>
 </div> 
-<!-- ThalesBlog Starts--> 
+<!-- ThalesBlog Ends--> 
 
 <!-- Card Section Starts-->
 <div class="container">
@@ -243,9 +411,10 @@
       <img src="images/index.jpeg" width="100%" height="370px">
       <h2 class="card-text_1">A step-by-step guide to getting started <br> with HTML forms</h2>
       <p class="card_paragraph_1">HTML forms are required when you want to collect some data from the person who visits your website. For example, when you register/login for applications like Uber, Netflix, or Facebook, you enter information like Name, Email, and Password through HTML forms.</p>
-      <div class="font-awsome">
+      <a href="#"><i class="fa fa-facebook" style="font-size:100px; color:white; border-bottom: 1px solid white; padding:10px;"></i></a>
+      <!-- <div class="font-awsome">
         <i class="fab fa-google-plus-g"></i>
-      </div>
+      </div> -->
     </div>  
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">  
       <img src="images/Object3.jpg" width=100% height="100%">  
@@ -284,7 +453,7 @@
       <span class="ThalesCode_Headquaters_TEL">TEL: +81 (3) 6303 2186<br>Email: info@motivo.jp</span>
     </div>
     <!-- User Input Section Starts -->
-    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12">
+    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12" id="user_input">
       <form class="float-right">
         <table>
           <tr><td><input type="text" name="company_name" maxlength="35" size="50" placeholder="CompanyName"></td><br></tr>
@@ -330,7 +499,6 @@
     </div>
   </div>   
   <!-- Footer's Information Section Ends --> 
-
   <!-- Footer's Partners Section Starts -->
   <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
       <ul class="float-left">
@@ -340,7 +508,6 @@
           <li>disclosure</li>
       </ul>  
   </div> 
-
   <!-- Footer's Partners Section Starts -->
   <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
     <div class="float-right">
@@ -356,6 +523,6 @@
 </div>
 </div>  
 <!-- Footer Ends -->
-
+<script src="jscript.js"></script>
 </body>
 </html>
